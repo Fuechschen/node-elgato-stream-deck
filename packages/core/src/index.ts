@@ -13,6 +13,7 @@ import {
 } from './models'
 import { StreamDeckPlus } from './models/plus'
 import { StreamDeck } from './types'
+import {StreamDeckTeensyXL} from "./models/teensyxl";
 
 export * from './types'
 export * from './id'
@@ -22,6 +23,7 @@ export { StreamDeckProxy } from './proxy'
 
 /** Elgato vendor id */
 export const VENDOR_ID = 0x0fd9
+export const TEENSY_VENDOR_ID = 0x16C0
 
 export enum DeviceModelType {
 	STREAMDECK = 'streamdeck',
@@ -84,6 +86,12 @@ export const DEVICE_MODELS: DeviceModelSpec[] = [
 		type: DeviceModelType.STREAMDECK,
 		productId: 0x008f,
 		class: StreamDeckXLV2,
+	},
+	{
+		id: DeviceModelId.TEENSYXL,
+		type: DeviceModelType.STREAMDECK,
+		productId: 0x0486,
+		class: StreamDeckTeensyXL,
 	},
 	{
 		id: DeviceModelId.MINIV2,
